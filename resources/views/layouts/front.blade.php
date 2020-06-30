@@ -40,13 +40,32 @@
                 <div class="container">
                      <a href="/" id="branding">
                         <img src="/uploads/products/lg.png" alt="Lincoln high School" width="40px" height="40px"><span style="color: #fff"><strong>O'Pizza</strong></span>
-                     </a> 
+                     </a>
+                     
+                     <ul class="nav-add">
+                            <li class="cart">
+                               <a href="#" class="js-cart-animate">
+                                 <i class="seoicon-basket bold" style="color:#f26827"></i>
+                                  <span class="cart-count" style="background: #f26522;">{{ Cart::content()->count() }}</span>
+                              </a>
+                             <div class="cart-popup-wrap" >
+                                 <div class="popup-cart">
+                                     <h4 class="title-cart align-center">${{ Cart::total() }}</h4> <br>
+                                     <a href="/cart">
+                                      <div class="btn btn-small" style="background: #f26522;">
+                                         <span class="text" >View cart</span>
+                                      </div>
+                                     </a>
+                                 </div>
+                             </div>
+                            </li>
+                         </ul>  
                 <div class="main-navigation">
                     <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                         <ul class="menu">
                              <li class="menu-item current-menu-item"><a  href="/">Home</a></li>
                         @if (Auth::guest())
-                            <li class="menu-item"><a href="#menu">Menu</a></li>
+                            <li class="menu-item"><a href="/#menu">Menu</a></li>
                             <li class="menu-item"><a href="{{ url('/login') }}">Login</a></li>
                         @else
                             <li class="menu-item"><a href="{{ url('/home') }}">Orders</a></li>
@@ -58,35 +77,18 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                              <li>
-                        <a href="{{ url('/logout') }}" width="100%" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Logout
-                        </a>
-                
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
+                                <a class="dropdown-item" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Logout
+                                </a>
+                        
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
                              </li>
                        </ul>
                              </li>
                         @endif
                     </ul>
-                    <ul class="nav-add">
-                            <li class="cart">
-                        <a href="#" class="js-cart-animate">
-                            <i class="seoicon-basket"></i>
-                             <span class="cart-count" style="background: #f26522;">{{ Cart::content()->count() }}</span>
-                         </a>
-                        <div class="cart-popup-wrap" >
-                                <div class="popup-cart">
-                                  <h4 class="title-cart align-center">${{ Cart::total() }}</h4> <br>
-                                     <a href="/cart">
-                                    <div class="btn btn-small" style="background: #f26522;">
-                                    <span class="text" >View cart</span>
-                                    </div>
-                                    </a>
-                                </div>
-                             </div>
-                         </li>
-                    </ul>
+
              </div> 
          <div class="mobile-navigation"></div>
     </div> 
@@ -99,23 +101,23 @@
             <li>
                <div class="slide-caption">
                 <span class="subheading"></span>
-                   <h2 class="slide-title">Welcome</h2>
+                   <h2 class="slide-title" style="color: #f26827;">Welcome</h2>
                         <p></p>
-                        <p style="color: #f26827;">It’s all about the pizza We cooked your desired Pizza Recipe</p>
-                            <a href="#" class="button primary large">Order Now</a>
+                        <p>It’s all about the pizza We cooked <br> desired Pizza Recipe</p>
+                            <a href="/#menu" class="button primary large">Order Now</a>
                              </div>
                             </li>
                             <li>
                <div class="slide-caption">
-                    <h2 class="slide-title">Crunchy</h2>
-                        <p style="color: #f26827;">The crunchy crust with chocolate ,and soft chewy pizza base, gives a delicious texture with unique taste , takes your taste buds to another level.</p>
-                         <a href="#" class="button primary large">Order Now</a>
+                    <h2 class="slide-title" style="color: #f26827;">Crunchy</h2>
+                        <p>The crunchy crust with chocolate, <br>and soft chewy pizza base, gives a <br>delicious texture with unique taste,<br> takes your taste buds to another level.</p>
+                         <a href="/#menu" class="button primary large">Order Now</a>
                              </div>
                                 <li>
                 <div class="slide-caption">
-                   <h2 class="slide-title">Delicious</h2>
-                        <p style="color: #f26827;">Stop in and say hi and see how locals name Delicious the best pizza. When you're hungry for beats and pizza come to our Delicious Pizza to satisfy that craving. Hope to see you soon!</p>
-                     <a href="#" class="button primary large">Order Now</a>
+                   <h2 class="slide-title" style="color: #f26827;">Delicious</h2>
+                        <p>Stop in and say hi and see how <br>locals name Delicious the best pizza. <br>When you're hungry for beats <br>and pizza come to our Delicious<br> Pizza to satisfy that craving. <br>Hope to see you soon!</p>
+                     <a href="/#menu" class="button primary large">Order Now</a>
                         </div>
                      </li>
                     </ul> 
@@ -131,7 +133,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer"  style="background: #f26827;">
         <div class="container">
 				<div class="row">
 					<div class="col-md-3">
@@ -159,15 +161,15 @@
 							<ul class="student-list">
 								<li><a href="/">
 										<img src="/uploads/products/pizza-3.jpg" width="50px" height="70px" alt="" class="avatar">
-										<span class="fn"> Healty Pizza</span>
+										<span class="fn" style="color:antiquewhite"> Healty Pizza</span>
 									</a></li>
 								<li><a href="/">
 										<img src="/uploads/products/delivery.jpg" width="50px" height="100px" alt="" class="avatar">
-										<span class="average">Fastest Delivery</span>
+										<span class="average" style="color:antiquewhite">Fastest Delivery</span>
                                     </a></li>
                                     <li><a href="/">
                                             <img src="/uploads/products/food.jpg" width="50px" height="70px" alt="" class="avatar">
-                                            <span class="average">Original Recipes</span>
+                                            <span class="average" style="color:antiquewhite">Original Recipes</span>
                                     </a></li>
 							</ul>
 						</div>
@@ -175,9 +177,9 @@
 					<div class="col-md-3">
 						<div class="widget">
 							<h3 class="widget-title">Have a Questions?</h3>
-							<a href="#" class="fa fa-location-arrow"><span class="text">&nbsp; Ojodu Berger, Lagos</span></a>
-                            <a href="#" class="fa fa-phone"> <span class="text">&nbsp; (+234) 08167 929 922</span></a>
-                            <a href="#" class="fa fa-envelope-square"><span class="text">&nbsp; Info@pizza.com</span></a>
+							<a href="#" class="fa fa-location-arrow" style="color:antiquewhite"><span class="text">&nbsp; Ojodu Berger, Lagos</span></a>
+                            <a href="#" class="fa fa-phone" style="color:antiquewhite"> <span class="text">&nbsp; (+234) 08167 929 922</span></a>
+                            <a href="#" class="fa fa-envelope-square" style="color:antiquewhite"><span class="text">&nbsp; Info@pizza.com</span></a>
 						</div>
                     </div>
 				</div>

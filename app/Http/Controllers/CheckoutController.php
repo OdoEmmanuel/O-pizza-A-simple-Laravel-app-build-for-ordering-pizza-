@@ -13,14 +13,18 @@ class CheckoutController extends Controller
 {
     public function index()
     {   
-        if(Cart::content()->count() == 0)
-        {
-            Session::flash('info', 'Your cart is empty. cart some Items');
-            return redirect()->back();
-        }
-        return view('checkout');
+ 
+        return view('/home', ['checkouts' => Checkout::all(),]);
     }
 
+    public function create(){
+     if(Cart::content()->count() == 0)
+     {
+         Session::flash('info', 'Your cart is empty. cart some Items');
+             return redirect()->back();
+         }
+             return view('checkout');
+    }
     
     public function store(Request $request)
     {
@@ -43,8 +47,8 @@ class CheckoutController extends Controller
         $chekout->address = $request->address;
         $chekout->mobile_phone = $request->mphone;
         $chekout->content =  Cart::content([]);
-        
-        $chekout->save();
+         dd($chekout);
+        // $chekout->save();
 
         Session::flash('success', 'Purchase successfull.');
 

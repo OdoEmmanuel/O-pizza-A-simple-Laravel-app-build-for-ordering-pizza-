@@ -51,10 +51,16 @@ Route::get('/cart/rapid/add/{id}', [
     'as' => 'cart.rapid.add'
 ]);
 
-Route::get('/cart/checkout', [
+Route::get('/cart/order', [
     'uses' => 'CheckoutController@index',
+    'as' => 'cart.order'
+]);
+
+ Route::get('/cart/checkout', [
+    'uses' => 'CheckoutController@create',
     'as' => 'cart.checkout'
 ]);
+
 
 Route::post('/cart/checkout', [
     'uses' => 'CheckoutController@store',
@@ -66,10 +72,7 @@ Route::resource('products', 'ProductsController');
 
 Auth::routes();
 
-Route::get('/home',[
-    'uses' => 'HomeController@index',
-    'as' => 'order.show'
-]);
+Route::get('/home', 'CheckoutController@index');
 
 Route::get('/auth/login', function () {
     return view('login');

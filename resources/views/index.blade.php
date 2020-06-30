@@ -6,7 +6,7 @@
                     <div class="panel-heading h2 my-4 text-center">Our Menu</div>
             <div class="row mb30" id="menu">
                 @foreach($products as $product)
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border">
                         <div class="books-item">
                             <div class="books-item-thumb">
                                 <img src="{{ asset($product->image) }}" alt="Pizza" width="165px" height="165px">
