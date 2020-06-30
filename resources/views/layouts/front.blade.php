@@ -101,20 +101,20 @@
                 <span class="subheading"></span>
                    <h2 class="slide-title">Welcome</h2>
                         <p></p>
-                        <p>It’s all about the pizza We cooked your desired Pizza Recipe</p>
+                        <p style="color: #f26827;">It’s all about the pizza We cooked your desired Pizza Recipe</p>
                             <a href="#" class="button primary large">Order Now</a>
                              </div>
                             </li>
                             <li>
                <div class="slide-caption">
                     <h2 class="slide-title">Crunchy</h2>
-                        <p>The crunchy crust with chocolate ,and soft chewy pizza base, gives a delicious texture with unique taste , takes your taste buds to another level.</p>
+                        <p style="color: #f26827;">The crunchy crust with chocolate ,and soft chewy pizza base, gives a delicious texture with unique taste , takes your taste buds to another level.</p>
                          <a href="#" class="button primary large">Order Now</a>
                              </div>
                                 <li>
                 <div class="slide-caption">
                    <h2 class="slide-title">Delicious</h2>
-                        <p>Stop in and say hi and see how locals name Delicious the best pizza. When you're hungry for beats and pizza come to our Delicious Pizza to satisfy that craving. Hope to see you soon!</p>
+                        <p style="color: #f26827;">Stop in and say hi and see how locals name Delicious the best pizza. When you're hungry for beats and pizza come to our Delicious Pizza to satisfy that craving. Hope to see you soon!</p>
                      <a href="#" class="button primary large">Order Now</a>
                         </div>
                      </li>
