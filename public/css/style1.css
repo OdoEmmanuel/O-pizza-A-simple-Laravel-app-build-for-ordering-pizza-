@@ -2121,7 +2121,8 @@ form select {
   font-size: 18px;
   font-size: 1.125rem;
 }
-.mobile-navigation .menu .current-menu-item a, .mobile-navigation .menu .menu-item:hover a {
+.mobile-navigation .menu .current-menu-item a, 
+.mobile-navigation .menu .menu-item:hover a {
   color: #72664c;
   background: #f7eacc;
   background: -webkit-linear-gradient(270deg, #f7eacc, #f26827);
@@ -2317,6 +2318,25 @@ form select {
 @media screen and (max-width: 480px) {
   .best-students-grid li {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 720px){
+  .mobile-navigation .menu a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-size: 1.125rem;
+    
+  }
+  .mobile-navigation .menu .current-menu-item a, 
+  .mobile-navigation .menu .menu-item:hover a {
+    color: #72664c;
+    background: #f7eacc;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+    
   }
 }
 .best-students-grid li a {
