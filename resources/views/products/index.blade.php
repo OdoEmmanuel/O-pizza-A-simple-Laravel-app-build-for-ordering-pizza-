@@ -10,9 +10,6 @@
                 <div class="panel-body">
                     <table class="table table-reponsive table-bordered ">
                         <thead  class="text-center" style="background: #f26827;">
-                               <th>
-                                   Id
-                              </th>
                               <th>
                                     Name
                               </th>
@@ -29,7 +26,7 @@
                         <tbody class="text-center">
                               @foreach($products as $product)
                                     <tr>
-                                          <td>{{ $product->id }}</td>
+     
                                           <td>{{ $product->name }}</td>
                                           <td>${{ number_format($product->price, 2) }}</td>
                                           <td>&euro;{{ number_format($product->price * 0.888243, 2) }}</td>
