@@ -3,7 +3,7 @@
 @section('page')
 <div class="container my-4">
     <div class="row">
-        <div class="col-md-12 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading h2 my-4 text-center">Dashboard</div>
 
@@ -28,7 +28,7 @@
                               <textarea name="description" id="description" cols="30" rows="10" class="form-control">{{ $product->description }}</textarea>
                         </div>
                         <div class="form-group">
-                              <button class="form-control btn btn-success">Save Product</button>
+                              <button class="form-control btn btn-success" style="background: #f26827;">Save Product</button>
                         </div>
                   </form>
                 </div>
