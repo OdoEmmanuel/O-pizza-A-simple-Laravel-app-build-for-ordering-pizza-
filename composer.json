@@ -33,9 +33,7 @@
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "php artisan key:generate"
-        ],
-        "post-update-cmd": [
+            "php artisan key:generate",
             "php artisan migrate"
         ]
     },
