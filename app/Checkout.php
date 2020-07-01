@@ -8,5 +8,5 @@ class Checkout extends Model
 {
     public $table = "shoppingcart";
 
-    protected $fillable = ['fname','lname','email','state','city','address','mphone','content'];
+    protected $fillable = ['fname','lname','email','state','city','address','mphone','item','quantity','amount'];
 }

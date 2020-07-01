@@ -19,8 +19,9 @@
                             <th>City</th>
                             <th>Home Address</th>
                             <th>Mobile Number</th>
-                            <th>Price</th>
-                            <th>Order</th>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -33,7 +34,9 @@
                             <td>{{ $checkout->city }}</td>
                             <td>{{ $checkout->address }}</td>
                             <td>{{ $checkout->mobile_phone }}</td>
-                            <td>{{ $checkout->content }}</td>
+                            <td>{{  $checkout->item }}</td>
+                            <td>{{  $checkout->quantity }}</td>
+                            <td>{{  $checkout->amount }}</td>
                           </tr>
                           @endforeach
                         </tbody>

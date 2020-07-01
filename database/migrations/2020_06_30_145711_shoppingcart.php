@@ -21,7 +21,9 @@ class Shoppingcart extends Migration
             $table->string('city');
             $table->string('address');
             $table->string('mobile_phone');
-            $table->longText('content');
+            $table->string('item');
+            $table->string('quantity');
+            $table->string('amount');
             $table->timestamps();
 
         });

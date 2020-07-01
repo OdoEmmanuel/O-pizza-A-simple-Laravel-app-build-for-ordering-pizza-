@@ -41,8 +41,8 @@
                                                 <td class="product-price">
                                                       <h6 class="price amount text-center">${{ $pdt->price }} | &euro;{{ number_format($pdt->price * 0.888243, 2) }}</h6>
                                                 </td>
-                                                <td class="product-quantity ">
-                                                      <div class="quantity ">
+                                                <td class="product-quantity ml-2">
+                                                      <div class="quantity">
                                                             <a href="{{ route('cart.decr', ['id' => $pdt->rowId, 'qty' => $pdt->qty ]) }}" class="quantity-minus">-</a>
                                                                   <input title="Qty" class="email input-text text text-center" type="text" value="{{ $pdt->qty }}" placeholder="1" readonly>
                                                             <a href="{{ route('cart.incr', ['id' => $pdt->rowId, 'qty' => $pdt->qty ]) }}" class="quantity-plus">+</a>

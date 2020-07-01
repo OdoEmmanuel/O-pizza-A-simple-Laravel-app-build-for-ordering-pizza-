@@ -16,8 +16,7 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="icon" type="image/jpg"  src="/uploads/products/lg.png" />
-    
+     <link rel='icon' href='/uploads/products/lg.png' type='image/x-icon' sizes="16x16" />
     <!--Plugins styles-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/jquery.mCustomScrollbar.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/swiper.min.css') }}">
@@ -50,7 +49,7 @@
                               </a>
                              <div class="cart-popup-wrap" >
                                  <div class="popup-cart">
-                                     <h4 class="title-cart align-center">${{ Cart::total() }}</h4> <br>
+                                     <h4 class="title-cart align-center">${{ number_format(Cart::total(),2) }}</h4> <br>
                                      <a href="/cart">
                                       <div class="btn btn-small" style="background: #f26522;">
                                          <span class="text" >View cart</span>

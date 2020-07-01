@@ -21,9 +21,10 @@
                                                       <tbody>
                                                          @foreach(Cart::content() as $item)
                                                         <tr class="text-center">
-                                                          <td>{{ $item->name }}</td>
-                                                          <td> {{ $item->qty }}</td>
-                                                          <td>${{ number_format($item->total(),2) }} | &euro;{{ number_format($item->total() * 0.888243, 2) }}</td>
+                                                            <td name="item"><input name ="item" id="item" type="text" class="form-control text-center" placeholder="" value="{{ $item->name }}" required readonly="readonly" ></td>
+                                                            <td name="quantity"><input name ="quantity" id="quantity" type="text" class="form-control text-center" placeholder="" value="{{ $item->qty }}" readonly="readonly"> </td>
+
+                                                          <td name="amount"><input name ="amount" id="amount" type="text" class="form-control text-center" placeholder="" value="${{ number_format($item->total(),2) }} | &euro;{{ number_format($item->total() * 0.888243, 2) }}" readonly="readonly" ></td>
                                                         </tr>
                                                         @endforeach
                                                         <tr class="text-center table-secondary">

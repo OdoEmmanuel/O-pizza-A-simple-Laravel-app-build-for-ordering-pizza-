@@ -35,7 +35,10 @@ class CheckoutController extends Controller
             'state' => 'required',
             'city' => 'required',
             'address' => 'required',
-            'mphone' => 'required'
+            'mphone' => 'required',
+            'item' => 'required',
+            'quantity' => 'required',
+            'amount' => 'required'
         ]);
         $chekout = new Checkout;
         $chekout->first_name = $request->fname;
@@ -46,11 +49,14 @@ class CheckoutController extends Controller
         $chekout->city = $request->city;
         $chekout->address = $request->address;
         $chekout->mobile_phone = $request->mphone;
-        $chekout->content =  Cart::content([]);
-         dd($chekout);
-        // $chekout->save();
+        $chekout->item = $request->item;
+        $chekout->quantity = $request->quantity;
+        $chekout->amount = $request->amount;
 
-        Session::flash('success', 'Purchase successfull.');
+        // dd($chekout);
+         $chekout->save();
+
+        Session::flash('success', 'Order Placed successfully.');
 
         Cart::destroy();
 
