@@ -35,6 +35,7 @@
             "php artisan key:generate"
         ],
         "post-update-cmd": [
+            "php artisan optimize",
             "php artisan migrate"
         ]
     },
